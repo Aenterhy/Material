@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Material"
-  s.version      = "2.15.0"
+  s.version      = "2.15.1"
   s.summary      = "Size-reduced Material library"
 
   s.description  = <<-DESC
@@ -21,6 +21,10 @@ Pod::Spec.new do |s|
 
   s.subspec 'Swift' do |sp|
     sp.source_files  = ["Pod/Swift/*.swift"]
+    s.resource_bundles = {
+      'com.ftband.material.icons' => ['Pod/*.xcassets'],
+    }
+
   end
 
   s.default_subspecs = 'Swift'

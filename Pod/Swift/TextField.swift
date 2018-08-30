@@ -116,7 +116,7 @@ open class TextField: UITextField {
     
     /// Divider active height.
     @IBInspectable
-    open var dividerActiveHeight: CGFloat = 2 {
+    open var dividerActiveHeight: CGFloat = 1 {
         didSet {
             guard isEditing else {
                 return
@@ -196,7 +196,7 @@ open class TextField: UITextField {
     
     /// This property adds a padding to placeholder y position animation
     @IBInspectable
-    open var placeholderVerticalOffset: CGFloat = 0
+    open var placeholderVerticalOffset: CGFloat = 5
     
     /// This property adds a padding to placeholder y position animation
     @IBInspectable
@@ -319,9 +319,8 @@ open class TextField: UITextField {
                 return
             }
             
-            visibilityIconButton = IconButton(image: UIImage(named: ""), tintColor: placeholderNormalColor.withAlphaComponent(0.54))
-            //            visibilityIconButton!.contentEdgeInsetsPreset = .none
-            //            visibilityIconButton!.pulseAnimation = .centerRadialBeyondBounds
+            visibilityIconButton = IconButton(image: isSecureTextEntry ? UIImage(named: "ic_visibility_white") : UIImage(named: "ic_visibility_white_off"), tintColor: placeholderNormalColor.withAlphaComponent(0.54))
+            visibilityIconButton!.contentEdgeInsetsPreset = .none
             isSecureTextEntry = true
             clearButtonMode = .never
             rightViewMode = .whileEditing
