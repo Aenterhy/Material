@@ -116,7 +116,7 @@ open class TextField: UITextField {
     
     /// Divider active height.
     @IBInspectable
-    open var dividerActiveHeight: CGFloat = 1 {
+    open var dividerActiveHeight: CGFloat = 2 {
         didSet {
             guard isEditing else {
                 return

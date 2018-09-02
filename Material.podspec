@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Material"
-  s.version      = "2.15.1"
+  s.version      = "2.15.2"
   s.summary      = "Size-reduced Material library"
 
   s.description  = <<-DESC
